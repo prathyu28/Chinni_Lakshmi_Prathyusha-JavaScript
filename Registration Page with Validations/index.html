@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Register!</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="modal-box">
+        <form class="RegistrationForm" name="myForm" action="./index.html" method="post">
+        <h2>Registration Form</h2>
+        <div class="name">
+          <input type="text" name="First Name" value="" placeholder="First Name" required>
+          <input type="text" name="Last Name" value="" placeholder="Last Name" required>
+        </div>
+        <br>
+        <div class="contact">
+          <input class="email" type="email" name="Email" value="" placeholder="Email Address" required onblur="validateEmail()">
+          <br>
+          <br>
+          <input class="phnum" type="Phone" name="PhoneNumber" value="" placeholder="Phone Number" required onblur="validatePhoneNumber()">
+        </div>
+        <br>
+        <div class="personalinfo">
+          <input class="dob" type="text" name="DOB" value="" required placeholder="Date of Birth DD-MM-YYYY" onblur="validateDOB()">
+          <input type="text" name="Location" value="" placeholder="Your Location" required>
+        </div>
+        <br>
+        <div class="password">
+          <input type="password" name="Password" value="" placeholder="Password" required onblur="validatePassword()">
+          <input type="password" name="ConfirmPassword" value="" placeholder="Confirm Password" required>
+        </div>
+        <br>
+        <div class="buttons">
+          <input class="reset" type="reset" name="Reset" value="Reset">
+          <input class="submit" type="submit" name="Submit" value="Register" onclick="final()">
+        </div>
+      </form>
+      </div>
+    </div>
+    <script src="./validate.js"></script>
+  </body>
+</html>
